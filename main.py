@@ -94,19 +94,18 @@ print(common_elements)
 # собирает ягоды с этого куста и с двух соседних с ним.
 # Напишите программу для нахождения максимального числа ягод, которое может собрать за один заход собирающий модуль,
 # находясь перед некоторым кустом заданной во входном файле грядки.
-
-N = int(input("Введите количество кустов черники: "))
+'''
+n = int(input("Введите количество кустов черники: "))
 berries = list(map(int, input(
     "Введите количество ягод на каждом кусте черники через пробел: ").split()))
 
 max_berries = 0
 
-for i in range(1, N - 1):
+for i in range(n):
 
-    collected_berries = berries[i] + berries[i - 1] + berries[i + 1]
+    collected_berries = berries[i] + berries[i - 1] + berries[i - 2]
 
     if collected_berries > max_berries:
         max_berries = collected_berries
 
 print(max_berries)
-'''
